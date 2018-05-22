@@ -1,3 +1,6 @@
+//Proyecto Franky
+//Autor: Leandro Amaro García y Universidad Maimonides
+
 #include "pineDefinition.h"
 #include "sensor.h"
 #include "reles.h"
