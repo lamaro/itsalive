@@ -11,7 +11,7 @@
 //Sensor Ultrasonico
 unsigned long previousMillisSensor = 0;
 const long intervaloSensor = 3000; //Cada cuanto tiempo lee el sensor
-const int thresholdSensorUsuario = 60; //Distancia del usuario. En centimetros
+const int thresholdSensorUsuario = 150; //Distancia del usuario. En centimetros
 const long tiempoReaccionInicial = 8000; //Tiempo que tarda en activarse el sensor al ingresar a REPOSO
 unsigned long previoustiempoReaccionInicial = 0; //En milisegundos
 
@@ -69,6 +69,7 @@ void loop() {
     {
     	// Franky sube, sonido terror, flash strobo on.
       //Sonido laboratorio
+      myDFPlayer.volume(15);  //Set volume value. From 0 to 30
       reproducirAudio(2,4000); 
     	unsigned long currentMillisReleCorte = millis();
   		if(currentMillisReleCorte - previousMillisReleCorte < intervaloReleCorteSubida) { //Sube por 3 segundos
@@ -109,6 +110,7 @@ void loop() {
         desconectarMecanica();
         primeraRep = 1;
         previoustiempoReaccionInicial = millis();
+        myDFPlayer.volume(5);  //Set volume value. From 0 to 30
         action = REPOSO;
       }//termina temporizador 
       break;
