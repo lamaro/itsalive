@@ -16,7 +16,7 @@ void releSetup(){
 
 	pinMode(releStrobo, OUTPUT);
 	digitalWrite(releStrobo, LOW);
-  delay(10000);
+  delay(5000);
   Serial.println("FIN INICIO RELES");
 }
 

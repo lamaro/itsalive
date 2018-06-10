@@ -17,7 +17,7 @@ void mp3PlayerSetup(){
   }
   Serial.println(F("DFPlayer Mini online."));
   
-  myDFPlayer.volume(25);  //Set volume value. From 0 to 30
+  myDFPlayer.volume(5);  //Set volume value. From 0 to 30
 }
 
 void reproducirAudio(int nroAudio, unsigned long duracionAudio){
